@@ -1,8 +1,9 @@
+import { HolaMundo } from "./02-hola-mundo-typescript/HolaMundo";
+
 function App() {
   return (
     <>
-      <h1>Vite + React + TS</h1>
-      <button>button</button>
+      <HolaMundo />
     </>
   );
 }
