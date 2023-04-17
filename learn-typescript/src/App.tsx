@@ -4,11 +4,12 @@ import InferenciaDeTipo from "./03-tiposypescript/02-InferenciaDeTipo/Inferencia
 import { TipoDeNumero } from "./03-tiposypescript/03-TipoDeNumero/TipoDeNumero";
 import { TipoDeString } from "./03-tiposypescript/03-TipoDeString/TipoDeString";
 import { TipoDeBooleano } from "./03-tiposypescript/04-TipoDeBooleano/TipoDeBooleano";
+import { TipoDeObjeto } from "./03-tiposypescript/05-TipoDeObjeto/TipoDeObjeto";
 
 function App() {
   return (
     <>
-      <TipoDeBooleano />
+      <TipoDeObjeto />
     </>
   );
 }
