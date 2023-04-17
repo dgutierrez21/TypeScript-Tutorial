@@ -3,11 +3,12 @@ import { AnotacionesDeTipo } from "./03-tiposypescript/01-AnotacionesDeTipo/Anot
 import InferenciaDeTipo from "./03-tiposypescript/02-InferenciaDeTipo/InferenciaDeTipo";
 import { TipoDeNumero } from "./03-tiposypescript/03-TipoDeNumero/TipoDeNumero";
 import { TipoDeString } from "./03-tiposypescript/03-TipoDeString/TipoDeString";
+import { TipoDeBooleano } from "./03-tiposypescript/04-TipoDeBooleano/TipoDeBooleano";
 
 function App() {
   return (
     <>
-      <TipoDeString />
+      <TipoDeBooleano />
     </>
   );
 }
