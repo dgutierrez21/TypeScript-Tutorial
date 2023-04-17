@@ -5,11 +5,12 @@ import { TipoDeNumero } from "./03-tiposypescript/03-TipoDeNumero/TipoDeNumero";
 import { TipoDeString } from "./03-tiposypescript/03-TipoDeString/TipoDeString";
 import { TipoDeBooleano } from "./03-tiposypescript/04-TipoDeBooleano/TipoDeBooleano";
 import { TipoDeObjeto } from "./03-tiposypescript/05-TipoDeObjeto/TipoDeObjeto";
+import { TipoDeArray } from "./03-tiposypescript/06-TipoDeArray/TipoDeArray";
 
 function App() {
   return (
     <>
-      <TipoDeObjeto />
+      <TipoDeArray />
     </>
   );
 }
