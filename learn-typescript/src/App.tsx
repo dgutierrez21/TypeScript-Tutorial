@@ -7,11 +7,12 @@ import { TipoDeBooleano } from "./03-tiposypescript/04-TipoDeBooleano/TipoDeBool
 import { TipoDeObjeto } from "./03-tiposypescript/05-TipoDeObjeto/TipoDeObjeto";
 import { TipoDeArray } from "./03-tiposypescript/06-TipoDeArray/TipoDeArray";
 import { TipoDeTuple } from "./03-tiposypescript/07-TipoDeTuple/TipoDeTuple";
+import { TipoDeEnumeracion } from "./03-tiposypescript/08-TipoDeEnumeracion/TipoDeEnumeracion";
 
 function App() {
   return (
     <>
-      <TipoDeTuple />
+      <TipoDeEnumeracion />
     </>
   );
 }
