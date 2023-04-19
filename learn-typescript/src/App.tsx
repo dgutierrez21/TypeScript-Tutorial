@@ -11,11 +11,12 @@ import { TipoDeEnumeracion } from "./03-tiposypescript/08-TipoDeEnumeracion/Tipo
 import { TipoAny } from "./03-tiposypescript/09-TipoAny/TipoAny";
 import { TipoNever } from "./03-tiposypescript/10-TipoNever/TipoNever";
 import { TipoUnion } from "./03-tiposypescript/11-TipoUnion/TipoUnion";
+import { AliasDeTipo } from "./03-tiposypescript/12-AliasDeTipo/AliasDeTipo";
 
 function App() {
   return (
     <>
-      <TipoUnion />
+      <AliasDeTipo />
     </>
   );
 }
