@@ -10,11 +10,12 @@ import { TipoDeTuple } from "./03-tiposypescript/07-TipoDeTuple/TipoDeTuple";
 import { TipoDeEnumeracion } from "./03-tiposypescript/08-TipoDeEnumeracion/TipoDeEnumeracion";
 import { TipoAny } from "./03-tiposypescript/09-TipoAny/TipoAny";
 import { TipoNever } from "./03-tiposypescript/10-TipoNever/TipoNever";
+import { TipoUnion } from "./03-tiposypescript/11-TipoUnion/TipoUnion";
 
 function App() {
   return (
     <>
-      <TipoNever />
+      <TipoUnion />
     </>
   );
 }
