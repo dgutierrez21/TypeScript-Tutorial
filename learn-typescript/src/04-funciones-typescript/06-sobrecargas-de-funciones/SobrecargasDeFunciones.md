@@ -52,3 +52,16 @@ Cada sobrecarga de función define una combinación de tipos admitidos por la fu
 Ahora, cuando llama a la función add() el editor de código sugiere que hay una función de sobrecarga disponible como se muestra en la siguiente imagen:
 
 ![img](./img/typescript-function-overloadings.png)
+
+## Sobrecarga de funciones con parámetros opcionales
+
+Cuando se sobrecarga una función, el número de parámetros requeridos debe ser el mismo. Si una sobrecarga tiene más parámetros que la otra, debe hacer que los parámetros adicionales sean opcionales. Por ejemplo:
+
+    function sum(a: number, b: number): number;
+    function sum(a: number, b: number, c: number): number;
+    function sum(a: number, b: number, c?: number): number {
+    if (c) return a + b + c;
+    return a + b;
+    }
+
+La función sum() acepta dos o tres números. El tercer parámetro es opcional. Si no lo hace opcional, obtendrá un error.

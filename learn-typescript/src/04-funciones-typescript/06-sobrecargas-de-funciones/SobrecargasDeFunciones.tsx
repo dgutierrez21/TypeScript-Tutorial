@@ -43,6 +43,16 @@ function aniadirNumOStr2(a: any, b: any): any {
 console.log(aniadirNumOStr2(10, 30));
 console.log(aniadirNumOStr2("Hola", "Mundo"));
 
+function sumar(a: number, b: number): number;
+function sumar(a: number, b: number, c: number): number;
+function sumar(a: number, b: number, c?: number): number {
+  if (c) return a + b + c;
+
+  return a + b;
+}
+
+console.log(sumar(5, 10));
+
 export const SobrecargasDeFunciones = () => {
   return <div>sobrecargasDeFunciones</div>;
 };
