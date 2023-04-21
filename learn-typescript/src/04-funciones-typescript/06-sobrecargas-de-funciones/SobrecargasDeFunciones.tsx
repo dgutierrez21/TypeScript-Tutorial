@@ -53,6 +53,31 @@ function sumar(a: number, b: number, c?: number): number {
 
 console.log(sumar(5, 10));
 
+class Contador {
+  private actual: number = 0;
+  cuenta(): number;
+  cuenta(target: number): number[];
+  cuenta(target?: number): number | number[] {
+    if (target) {
+      let valores = [];
+
+      for (let empezar = this.actual; empezar <= target; empezar++) {
+        valores.push(empezar);
+      }
+
+      this.actual = target;
+      return valores;
+    }
+
+    return ++this.actual;
+  }
+}
+
+let contador = new Contador();
+
+console.log(contador.cuenta()); // 0
+console.log(contador.cuenta(100)); // 0
+
 export const SobrecargasDeFunciones = () => {
   return <div>sobrecargasDeFunciones</div>;
 };

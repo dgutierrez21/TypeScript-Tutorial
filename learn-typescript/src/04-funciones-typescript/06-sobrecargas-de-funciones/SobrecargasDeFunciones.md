@@ -65,3 +65,44 @@ Cuando se sobrecarga una función, el número de parámetros requeridos debe ser
     }
 
 La función sum() acepta dos o tres números. El tercer parámetro es opcional. Si no lo hace opcional, obtendrá un error.
+
+## Sobrecarga de métodos
+
+Cuando una función es una propiedad de una clase, se denomina método. TypeScript también admite la sobrecarga de métodos. Por ejemplo:
+
+    class Counter {
+    private current: number = 0;
+    count(): number;
+    count(target: number): number[];
+    count(target?: number): number | number[] {
+    if (target) {
+    let values = [];
+    for (let start = this.current; start <= target; start++) {
+    values.push(start);
+    }
+    this.current = target;
+    return values;
+    }
+    return ++this.current;
+    }
+    }
+
+La función count() puede devolver un número o una matriz dependiendo del número de argumentos que se le pasen:
+
+    let counter = new Counter();
+
+    console.log(counter.count()); // return a number
+    console.log(counter.count(20)); // return an array
+
+Salida:
+
+    1
+    [
+       1,  2,  3,  4,  5,  6,  7,
+       8,  9, 10, 11, 12, 13, 14,
+      15, 16, 17, 18, 19, 20
+    ]
+
+# Resumen
+
+- Las sobrecargas de funciones de TypeScript permiten describir la relación entre los tipos de parámetros y los resultados de una función.
