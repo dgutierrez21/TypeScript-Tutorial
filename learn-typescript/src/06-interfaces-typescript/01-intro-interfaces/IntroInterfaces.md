@@ -96,3 +96,28 @@ Y lo siguiente muestra cómo usar la interfaz Person en la función getFullName(
     }
     return `${person.firstName} ${person.lastName}`;
     }
+
+## Propiedades de solo lectura
+
+Si las propiedades sólo deben modificarse cuando se crea el objeto por primera vez, puede utilizar la palabra clave readonly antes del nombre de la propiedad:
+
+    interface Person {
+    readonly ssn: string;
+    firstName: string;
+    lastName: string;
+    }
+
+    let person: Person;
+    person = {
+    ssn: '171-28-0926',
+    firstName: 'John',
+    lastName: 'Doe'
+    }
+
+En este ejemplo, la propiedad ssn no se puede cambiar:
+
+    person.ssn = '171-28-0000';
+
+Error:
+
+    error TS2540: Cannot assign to 'ssn' because it is a read-only property.

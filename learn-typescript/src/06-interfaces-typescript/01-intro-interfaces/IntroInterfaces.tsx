@@ -72,6 +72,25 @@ const kristy = {
 
 console.log(obtenerNombreComplet3(kristy));
 
+// Propiedades de solo lectura
+interface Persona3 {
+  readonly nombre: string;
+  readonly apellido: string;
+  edad: number;
+}
+
+const persona3: Persona3 = {
+  nombre: "Annie",
+  apellido: "Villa",
+  edad: 25,
+};
+
+persona3.nombre = "Wendi"; // Error - No se puede asignar a "nombre" porque es una propiedad de solo lectura.
+
+persona3.edad = 40; // valid
+
+console.log(persona3);
+
 export const IntroInterfaces = () => {
   return <div>IntroInterfaces</div>;
 };
