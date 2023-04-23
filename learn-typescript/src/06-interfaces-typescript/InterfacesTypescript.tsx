@@ -1,7 +1,11 @@
+import { IntroInterfaces } from "./01-intro-interfaces/IntroInterfaces";
+
 const InterfacesTypescript = () => {
-  return <>
-  
-  </>;
+  return (
+    <>
+      <IntroInterfaces />
+    </>
+  );
 };
 
 export default InterfacesTypescript;
