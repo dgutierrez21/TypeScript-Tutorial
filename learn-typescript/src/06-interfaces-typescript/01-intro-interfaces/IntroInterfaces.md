@@ -75,3 +75,24 @@ Dado que el objeto jane tiene dos propiedades de cadena firstName y lastName, pu
 
     let fullName = getFullName(jane);
     console.log(fullName); // Jane Doe
+
+## Propiedades opcionales
+
+Una interfaz puede tener propiedades opcionales. Para declarar una propiedad opcional, utilice el signo de interrogación (?) al final del nombre de la propiedad en la declaración, de la siguiente manera:
+
+    interface Person {
+    firstName: string;
+    middleName?: string;
+    lastName: string;
+    }
+
+En este ejemplo, la interfaz Person tiene dos propiedades obligatorias y una propiedad opcional.
+
+Y lo siguiente muestra cómo usar la interfaz Person en la función getFullName()
+
+    function getFullName(person: Person) {
+    if (person.middleName) {
+    return `${person.firstName} ${person.middleName} ${person.lastName}`;
+    }
+    return `${person.firstName} ${person.lastName}`;
+    }

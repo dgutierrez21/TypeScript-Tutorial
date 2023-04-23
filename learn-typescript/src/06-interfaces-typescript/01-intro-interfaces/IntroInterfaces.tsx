@@ -51,6 +51,27 @@ const nombreCompletoDavid = obtenerNombreCompleto2(david);
 
 console.log(nombreCompletoDavid);
 
+// Propiedades opcionales
+interface Persona2 {
+  nombre: string;
+  primerApellido: string;
+  segundoApellido?: number;
+}
+
+function obtenerNombreComplet3(persona: Persona2): string {
+  if (persona.segundoApellido)
+    return `${persona.nombre} ${persona.primerApellido} ${persona.segundoApellido}`;
+
+  return persona.nombre + " " + persona.primerApellido;
+}
+
+const kristy = {
+  nombre: "Kristy",
+  primerApellido: "Blevins",
+}; // valid
+
+console.log(obtenerNombreComplet3(kristy));
+
 export const IntroInterfaces = () => {
   return <div>IntroInterfaces</div>;
 };
