@@ -102,6 +102,27 @@ formato = (cad, esMayus) => (esMayus ? cad.toUpperCase() : cad.toLowerCase());
 
 console.log(formato("Hola Mundo", true));
 
+// Tipo de clase
+
+interface Json {
+  toJson(): string;
+}
+
+class Persona4 implements Json {
+  constructor(private nombre: string, private apellido: string) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  toJson(): string {
+    return JSON.stringify(this);
+  }
+}
+
+const daisy = new Persona4("Daisy", "Marshall");
+
+console.log(daisy.toJson());
+
 export const IntroInterfaces = () => {
   return <div>IntroInterfaces</div>;
 };

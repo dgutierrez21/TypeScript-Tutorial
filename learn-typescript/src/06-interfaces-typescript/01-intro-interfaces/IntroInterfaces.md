@@ -170,3 +170,47 @@ El siguiente código también funciona perfectamente bien aunque el lowerCase es
     console.log(lowerCase('Hi', false));
 
 Observe que el segundo argumento se pasa cuando se llama a la función lowerCase()
+
+## Tipos de clase
+
+una clase puede implementar una interfaz, lo que significa que la clase debe tener todas las propiedades y métodos definidos en la interfaz. Esto se hace utilizando la palabra clave implements seguida del nombre de la interfaz.
+
+Si ha trabajado con Java o C #, puede encontrar que el uso principal de la interfaz es definir un contrato entre clases no relacionadas.
+
+Por ejemplo, la siguiente interfaz Json puede ser implementada por cualquier clase no relacionada:
+
+    interface Json {
+    toJSON(): string
+    }
+
+A continuación se declara una clase que implementa la interfaz Json:
+
+    class Person implements Json {
+    constructor(private firstName: string,
+    private lastName: string) {
+    }
+    toJson(): string {
+    return JSON.stringify(this);
+    }
+    }
+
+En la clase Person, implementamos el método toJson() de la interfaz Json.
+
+En el ejemplo siguiente se muestra cómo utilizar la clase Person:
+
+    let person = new Person('John', 'Doe');
+    console.log(person.toJson());
+
+Salida:
+
+    {"firstName":"John","lastName":"Doe"}
+
+# Resumen
+
+- Las interfaces de TypeScript definen contratos en el código y proporcionan nombres explícitos para la comprobación de tipos.
+
+- Las interfaces pueden tener propiedades opcionales o propiedades de sólo lectura.
+
+- Las interfaces se pueden utilizar como tipos de funciones.
+
+- Las interfaces se utilizan normalmente como tipos de clase que hacen un contrato entre clases no relacionadas.
