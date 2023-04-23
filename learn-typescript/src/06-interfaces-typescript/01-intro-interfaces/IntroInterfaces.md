@@ -121,3 +121,52 @@ En este ejemplo, la propiedad ssn no se puede cambiar:
 Error:
 
     error TS2540: Cannot assign to 'ssn' because it is a read-only property.
+
+## Tipos de funciones
+
+Además de describir un objeto con propiedades, las interfaces también permiten describir tipos de funciones.
+
+Para describir un tipo de función, asigne la interfaz a la firma de función que contiene la lista de parámetros con tipos y tipos devueltos. Por ejemplo:
+
+    interface StringFormat {
+    (str: string, isUpper: boolean): string
+    }
+
+Ahora, puede usar esta interfaz de tipo de función.
+
+A continuación se muestra cómo declarar una variable de un tipo de función y asignarle un valor de función del mismo tipo:
+
+    let format: StringFormat;
+
+    format = function (str: string, isUpper: boolean) {
+    return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+    };
+
+    console.log(format('hi', true));
+
+Salida:
+
+    HI
+
+Tenga en cuenta que no es necesario que los nombres de los parámetros coincidan con la firma de la función. El siguiente ejemplo es equivalente al ejemplo anterior:
+
+    let format: StringFormat;
+
+    format = function (src: string, upper: boolean) {
+    return upper ? src.toLocaleUpperCase() : src.toLocaleLowerCase();
+    };
+
+    console.log(format('hi', true));
+
+La interfaz StringFormat garantiza que todos los llamadores de la función que lo implementa pasen los argumentos requeridos: una string y un boolean.
+
+El siguiente código también funciona perfectamente bien aunque el lowerCase está asignado a una función que no tiene el segundo argumento:
+
+    let lowerCase: StringFormat;
+    lowerCase = function (str: string) {
+    return str.toLowerCase();
+    }
+
+    console.log(lowerCase('Hi', false));
+
+Observe que el segundo argumento se pasa cuando se llama a la función lowerCase()

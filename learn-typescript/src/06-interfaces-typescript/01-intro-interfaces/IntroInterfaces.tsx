@@ -91,6 +91,17 @@ persona3.edad = 40; // valid
 
 console.log(persona3);
 
+//Tipo de funciones
+interface FormatoCadena {
+  (cad: string, esMayus: boolean): string;
+}
+
+let formato: FormatoCadena;
+
+formato = (cad, esMayus) => (esMayus ? cad.toUpperCase() : cad.toLowerCase());
+
+console.log(formato("Hola Mundo", true));
+
 export const IntroInterfaces = () => {
   return <div>IntroInterfaces</div>;
 };
