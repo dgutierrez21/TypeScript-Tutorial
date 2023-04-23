@@ -4,11 +4,12 @@ import { ParametrosREST } from "./04-funciones-typescript/05-parametros-REST/Par
 import { SobrecargasDeFunciones } from "./04-funciones-typescript/06-sobrecargas-de-funciones/SobrecargasDeFunciones";
 import { FuncionesTypescript } from "./04-funciones-typescript/FuncionesTypescript";
 import ClasesTypescript from "./05-clases-typescript/ClasesTypescript";
+import InterfacesTypescript from "./06-interfaces-typescript/InterfacesTypescript";
 
 function App() {
   return (
     <>
-      <ClasesTypescript />
+      <InterfacesTypescript />
     </>
   );
 }
