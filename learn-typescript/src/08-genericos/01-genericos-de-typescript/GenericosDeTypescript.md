@@ -44,3 +44,26 @@ En este ejemplo se muestra cómo utilizar la función getRandomStringElement()
     console.log(getRandomStringElement(colors));
 
 Más tarde, es posible que necesite obtener un elemento aleatorio en una matriz de objetos. Crear una nueva función cada vez que desee obtener un elemento aleatorio de un nuevo tipo de matriz no es escalable.
+
+## Uso del tipo any
+
+Una solución para este problema es establecer el tipo del argumento de matriz como any[]. Al hacer esto, necesita escribir solo una función que funcione con una matriz de cualquier tipo.
+
+    function getRandomAnyElement(items: any[]): any {
+        let randomIndex = Math.floor(Math.random() * items.length);
+        return items[randomIndex];
+    }
+
+El getRandomAnyElement() funciona con una matriz de any tipo que incluye una matriz de números, cadenas, objetos, etc.:
+
+    let numbers = [1, 5, 7, 4, 2, 9];
+    let colors = ['red', 'green', 'blue'];
+
+    console.log(getRandomAnyElement(numbers));
+    console.log(getRandomAnyElement(colors));
+
+Esta solución funciona bien. Sin embargo, tiene un inconveniente.
+
+No permite exigir el tipo del elemento devuelto. En otras palabras, no es seguro para tipos.
+
+Una mejor solución para evitar la duplicación de código mientras se preserva el tipo es usar genéricos.

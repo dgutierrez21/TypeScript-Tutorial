@@ -21,6 +21,29 @@ console.log(obtenerElementoNumeroAleatorio(arrNumber));
 
 // Más tarde, es posible que necesite obtener un elemento aleatorio en una matriz de objetos. Crear una nueva función cada vez que desee obtener un elemento aleatorio de un nuevo tipo de matriz no es escalable.
 
+// Uso del tipo any
+// Una solución para este problema es establecer el tipo del argumento de matriz como any[]. Al hacer esto, necesita escribir solo una función que funcione con una matriz de cualquier tipo.
+
+function obtenerElementoAnyAleatorio(elementos: any[]): any {
+  const indiceAleatorio = Math.floor(Math.random() * elementos.length);
+
+  return elementos[indiceAleatorio];
+}
+
+const arrNumber2 = [20, 30, 40];
+
+console.log(obtenerElementoAnyAleatorio(arrNumber2));
+
+const colores = ["rojo", "azul", "verde"];
+
+console.log(obtenerElementoAnyAleatorio(colores));
+
+// Esta solución funciona bien. Sin embargo, tiene un inconveniente.
+
+// No permite exigir el tipo del elemento devuelto. En otras palabras, no es seguro para tipos.
+
+// Una mejor solución para evitar la duplicación de código mientras se preserva el tipo es usar genéricos.
+
 export const GenericosDeTypescript = () => {
   return <div>GenericosDeTypescript</div>;
 };
