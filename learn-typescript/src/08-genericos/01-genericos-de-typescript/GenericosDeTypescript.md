@@ -67,3 +67,18 @@ Esta solución funciona bien. Sin embargo, tiene un inconveniente.
 No permite exigir el tipo del elemento devuelto. En otras palabras, no es seguro para tipos.
 
 Una mejor solución para evitar la duplicación de código mientras se preserva el tipo es usar genéricos.
+
+## Los genéricos de TypeScript vienen al rescate
+
+A continuación se muestra una función genérica que devuelve el elemento aleatorio de una matriz de tipo T:
+
+    function getRandomElement<T>(items: T[]): T {
+        let randomIndex = Math.floor(Math.random() * items.length);
+        return items[randomIndex];
+    }
+
+Esta función utiliza la variable de tipo T. La T permite capturar el tipo que se proporciona en el momento de llamar a la función. Además, la función utiliza la variable de tipo T como su tipo de retorno.
+
+Esta función getRandomElement() es genérica porque puede trabajar con cualquier tipo de datos, incluyendo cadena, número, objetos,...
+
+Por convención, usamos la letra T como variable de tipo. Sin embargo, puede usar libremente otras letras como A, B C, ...

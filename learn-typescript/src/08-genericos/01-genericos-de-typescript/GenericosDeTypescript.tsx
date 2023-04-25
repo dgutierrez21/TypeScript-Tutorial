@@ -44,6 +44,23 @@ console.log(obtenerElementoAnyAleatorio(colores));
 
 // Una mejor solución para evitar la duplicación de código mientras se preserva el tipo es usar genéricos.
 
+// Los genéricos de TypeScript vienen al rescate
+
+function obtenerElementoAleatorio<T>(elementos: T[]): T {
+  const indiceAleatorio = Math.floor(Math.random() * elementos.length);
+
+  return elementos[indiceAleatorio];
+}
+// Esta función utiliza la variable de tipo T. La T permite capturar el tipo que se proporciona en el momento de llamar a la función. Además, la función utiliza la variable de tipo T como su tipo de retorno.
+
+const arrNumber3 = [27, 35, 55];
+
+console.log(obtenerElementoAleatorio(arrNumber3));
+
+const colores2 = ["amarillo", "celeste", "negro"];
+
+console.log(obtenerElementoAleatorio(colores2));
+
 export const GenericosDeTypescript = () => {
   return <div>GenericosDeTypescript</div>;
 };
