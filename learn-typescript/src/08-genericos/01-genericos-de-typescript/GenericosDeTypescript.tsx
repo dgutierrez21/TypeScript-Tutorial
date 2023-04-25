@@ -59,7 +59,11 @@ console.log(obtenerElementoAleatorio(arrNumber3));
 
 const colores2 = ["amarillo", "celeste", "negro"];
 
-console.log(obtenerElementoAleatorio(colores2));
+// forma de llamar a una función genérica
+
+console.log(obtenerElementoAleatorio(colores2)); // TypeScript establezca el valor de T automáticamente en función del tipo de argumento al que se pasa
+
+console.log(obtenerElementoAleatorio<string>(colores2)); // se el asigna explicitamente el tipo T
 
 export const GenericosDeTypescript = () => {
   return <div>GenericosDeTypescript</div>;

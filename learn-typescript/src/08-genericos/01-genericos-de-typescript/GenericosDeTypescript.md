@@ -82,3 +82,27 @@ Esta función utiliza la variable de tipo T. La T permite capturar el tipo que s
 Esta función getRandomElement() es genérica porque puede trabajar con cualquier tipo de datos, incluyendo cadena, número, objetos,...
 
 Por convención, usamos la letra T como variable de tipo. Sin embargo, puede usar libremente otras letras como A, B C, ...
+
+## Llamar a una función genérica
+
+A continuación se muestra cómo utilizar getRandomElement() con una matriz de números:
+
+    let numbers = [1, 5, 7, 4, 2, 9];
+    let randomEle = getRandomElement<number>(numbers);
+    console.log(randomEle);
+
+En este number explícitamente number como el tipo T a la función getRandomElement()
+
+En la práctica, usará la inferencia de tipos para el argumento. Significa que permite que el compilador TypeScript establezca el valor de T automáticamente en función del tipo de argumento al que se pasa, de esta manera:
+
+    let numbers = [1, 5, 7, 4, 2, 9];
+    let randomEle = getRandomElement(numbers);
+    console.log(randomEle);
+
+En este ejemplo, no pasamos el tipo de number a getRandomElement() explícitamente. El compilador simplemente mira el argumento y establece T en su tipo.
+
+Ahora, la función getRandomElement() también es segura para tipos. Por ejemplo, si asigna el valor devuelto a una variable de cadena, obtendrá un error:
+
+    let numbers = [1, 5, 7, 4, 2, 9];
+    let returnElem: string;
+    returnElem = getRandomElement(numbers);  // compiler error
