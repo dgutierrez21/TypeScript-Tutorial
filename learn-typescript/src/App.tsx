@@ -6,11 +6,12 @@ import { FuncionesTypescript } from "./04-funciones-typescript/FuncionesTypescri
 import ClasesTypescript from "./05-clases-typescript/ClasesTypescript";
 import InterfacesTypescript from "./06-interfaces-typescript/InterfacesTypescript";
 import TiposAvanzados from "./07-tipos-avanzados/TiposAvanzados";
+import Genericos from "./08-genericos/Genericos";
 
 function App() {
   return (
     <>
-      <TiposAvanzados />
+      <Genericos />
     </>
   );
 }
