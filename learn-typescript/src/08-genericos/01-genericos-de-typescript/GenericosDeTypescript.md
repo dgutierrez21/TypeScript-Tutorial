@@ -106,3 +106,30 @@ Ahora, la función getRandomElement() también es segura para tipos. Por ejemplo
     let numbers = [1, 5, 7, 4, 2, 9];
     let returnElem: string;
     returnElem = getRandomElement(numbers);  // compiler error
+
+# Funciones genéricas con múltiples tipos
+
+A continuación se ilustra cómo desarrollar una función genérica con dos variables de tipo U y V:
+
+    function merge<U, V>(obj1: U, obj2: V) {
+        return {
+            ...obj1,
+            ...obj2
+        };
+    }
+
+La función merge() combina dos objetos con el tipo U y V. Combina las propiedades de los dos objetos en un solo objeto.
+
+La inferencia de tipo infiere el valor devuelto de la función merge() como un U tipo de intersección de U y V, que es U & V V
+A continuación se muestra cómo utilizar la función merge() que combina dos objetos:
+
+    let result = merge(
+        { name: 'John' },
+        { jobTitle: 'Frontend Developer' }
+    );
+
+    console.log(result);
+
+Salida:
+
+    { name: 'John', jobTitle: 'Frontend Developer' }

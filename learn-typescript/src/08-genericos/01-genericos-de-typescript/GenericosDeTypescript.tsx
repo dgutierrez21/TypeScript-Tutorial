@@ -65,6 +65,15 @@ console.log(obtenerElementoAleatorio(colores2)); // TypeScript establezca el val
 
 console.log(obtenerElementoAleatorio<string>(colores2)); // se el asigna explicitamente el tipo T
 
+// Funciones genéricas con múltiples tipos
+function merge<U, V>(obj1: U, obj2: V): U & V {
+  return { ...obj1, ...obj2 };
+}
+
+const resultado = merge({ nombre: "Pedro" }, { profesion: "Web Developer" });
+
+console.log(resultado);
+
 export const GenericosDeTypescript = () => {
   return <div>GenericosDeTypescript</div>;
 };
