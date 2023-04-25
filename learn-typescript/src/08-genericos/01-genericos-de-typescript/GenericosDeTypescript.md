@@ -133,3 +133,17 @@ A continuación se muestra cómo utilizar la función merge() que combina dos ob
 Salida:
 
     { name: 'John', jobTitle: 'Frontend Developer' }
+
+## Ventajas de los genéricos de TypeScript
+
+Las siguientes son ventajas de los genéricos de TypeScript:
+
+- Aproveche las comprobaciones de tipo en tiempo de compilación.
+
+- Elimine las piezas fundidas de tipo.
+
+- Permiten implementar algoritmos genéricos.
+
+# Resumen
+
+- Utilice los genéricos de TypeScript para desarrollar funciones, interfaces y clases reutilizables, generalizadas y seguras para tipos.
